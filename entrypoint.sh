@@ -12,10 +12,16 @@ mkdir -p /usr/android-keys/
 /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/keytool -genkeypair -keyalg RSA -alias "${INPUT_ANDROID_DEBUG_USERNAME}" -keypass "${INPUT_ANDROID_DEBUG_PASSWORD}" -keystore debug.keystore -storepass "${INPUT_ANDROID_DEBUG_PASSWORD}" -dname "CN=Android Debug,O=Android,C=US" -validity 9999
 mv ./debug.keystore /usr/android-keys/debug.keystore
 
+#REMOVE AFTER DEBUGGING
+echo "User_settings"
+cat path_to_editor_settings
+
+cd /project
+
 # Export for HTML5
 echo "Building ${INPUT_BUILD_FILE_NAME} for Android"
 mkdir -p ./build/android/
-godot --export project.godot "Android" ./build/android/${INPUT_BUILD_FILE_NAME}.apk -v
+godot --export-debug project.godot "Android" ./build/android/${INPUT_BUILD_FILE_NAME}.apk -v
 
 # Export for Linux
 echo "Building ${INPUT_BUILD_FILE_NAME} for Linux"
