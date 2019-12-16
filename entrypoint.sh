@@ -14,7 +14,7 @@ mv ./debug.keystore /usr/android-keys/debug.keystore
 
 #REMOVE AFTER DEBUGGING
 echo "User_settings"
-cat path_to_editor_settings
+cat $path_to_editor_settings
 
 cd /project
 
