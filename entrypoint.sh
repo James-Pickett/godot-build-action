@@ -2,6 +2,10 @@
 
 set -e
 
+# move templates into github expected dir
+mkdir -p /github/home/.local/share/godot/templates/3.1.2.stable
+mv /root/.local/share/godot/templates/3.1.2.stable /github/home/.local/share/godot/templates/3.1.2.stable
+
 # create editor_settings
 export path_to_editor_settings=/github/home/.config/godot/editor_settings-3.tres
 mkdir -p $(dirname "$path_to_editor_settings")
