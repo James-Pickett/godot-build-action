@@ -3,7 +3,7 @@
 set -e
 
 # create editor_settings
-export path_to_editor_settings=/root/.config/godot/editor_settings-3.tres
+export path_to_editor_settings=/github/home/.config/godot/editor_settings-3.tres
 mkdir -p $(dirname "$path_to_editor_settings")
 touch $path_to_editor_settings
 echo "[gd_resource type=\"EditorSettings\" format=2]" >> $path_to_editor_settings
