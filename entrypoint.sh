@@ -4,8 +4,8 @@ set -e
 
 # create update editor settings with debug user / pass
 export path_to_editor_settings=root/.config/godot/editor_settings-3.tres
-./edit-tres.sh $path_to_editor_settings export/android/debug_keystore_user ${INPUT_ANDROID_DEBUG_USERNAME}
-./edit-tres.sh $path_to_editor_settings export/android/debug_keystore_pass ${INPUT_ANDROID_DEBUG_PASSWORD}
+/edit-tres.sh $path_to_editor_settings export/android/debug_keystore_user ${INPUT_ANDROID_DEBUG_USERNAME}
+/edit-tres.sh $path_to_editor_settings export/android/debug_keystore_pass ${INPUT_ANDROID_DEBUG_PASSWORD}
 
 # create debug keystore
 RUN mkdir -p usr/android-keys

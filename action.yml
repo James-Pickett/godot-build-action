@@ -8,7 +8,7 @@ branding:
   icon: loader
   color: blue
 inputs:
-  build-file-name:
+  build_file_name:
     description: "Name of the build file"
   android_debug_username:
     description: "Username to sign android debug key"
