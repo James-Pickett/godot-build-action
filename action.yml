@@ -7,3 +7,10 @@ runs:
 branding:
   icon: loader
   color: blue
+inputs:
+  build-file-name:
+    description: "Name of the build file"
+  android_debug_username:
+    description: "Username to sign android debug key"
+  android_debug_password:
+    description: "Password to sign android debug key"
