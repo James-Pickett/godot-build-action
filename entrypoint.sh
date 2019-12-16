@@ -2,9 +2,9 @@
 
 set -e
 
-sanitize "${BUILD_FILE_NAME}" "build-file-name"
-sanitize "${ANDROID_DEBUG_USERNAME}" "android_debug_username"
-sanitize "${ANDROID_DEBUG_PASSWORD}" "android_debug_password"
+"${BUILD_FILE_NAME}" "build-file-name"
+"${ANDROID_DEBUG_USERNAME}" "android_debug_username"
+"${ANDROID_DEBUG_PASSWORD}" "android_debug_password"
 
 # create update editor settings with debug user / pass
 export path_to_editor_settings=root/.config/godot/editor_settings-3.tres
