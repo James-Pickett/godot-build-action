@@ -8,10 +8,9 @@ export path_to_editor_settings=/root/.config/godot/editor_settings-3.tres
 /edit-tres.sh $path_to_editor_settings export/android/debug_keystore_pass ${INPUT_ANDROID_DEBUG_PASSWORD}
 
 # create debug keystore
-mkdir -p usr/android-keys
+mkdir -p usr/android-keys/
 /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/keytool -genkeypair -keyalg RSA -alias "${INPUT_ANDROID_DEBUG_USERNAME}" -keypass "${INPUT_ANDROID_DEBUG_PASSWORD}" -keystore debug.keystore -storepass "${INPUT_ANDROID_DEBUG_PASSWORD}" -dname "CN=Android Debug,O=Android,C=US" -validity 9999
-mkdir -p /usr/android-keys
-mv /usr/lib/jvm/java-1.8.0-openjdk-amd64/debug.keystore /usr/android-keys/debug.keystore
+mv /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/debug.keystore /usr/android-keys/debug.keystore
 
 # Export for HTML5
 echo "Building ${INPUT_BUILD_FILE_NAME} for Android"
