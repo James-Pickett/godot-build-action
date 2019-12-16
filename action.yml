@@ -1,0 +1,9 @@
+name: "Godot Builds"
+description: "Builds a Godot project for multiple platforms"
+author: jamespickett
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: loader
+  color: blue
