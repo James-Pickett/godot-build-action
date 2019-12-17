@@ -2,7 +2,7 @@
 
 set -e
 
-wget https://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v3.1.1-stable_export_templates.tpz --quiet
+wget https://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v3.1.1-stable_export_templates.tpz
 mkdir ~/.cache
 mkdir -p ~/.config/godot
 mkdir -p ~/.local/share/godot/templates/3.1.1.stable
@@ -28,8 +28,6 @@ echo "[resource]" >> $path_to_editor_settings
 mkdir -p /usr/android-keys/
 /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/keytool -genkeypair -keyalg RSA -alias "${INPUT_ANDROID_DEBUG_USERNAME}" -keypass "${INPUT_ANDROID_DEBUG_PASSWORD}" -keystore debug.keystore -storepass "${INPUT_ANDROID_DEBUG_PASSWORD}" -dname "CN=Android Debug,O=Android,C=US" -validity 9999
 mv ./debug.keystore /usr/android-keys/debug.keystore
-
-cd ./project
 
 # Export for HTML5
 echo "Building ${INPUT_BUILD_FILE_NAME} for Android"
