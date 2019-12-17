@@ -3,7 +3,7 @@
 set -e
 
 # create link so github actions can easily access
-mkdir -p /github/home/.local/share/godot/ \
+mkdir -p /github/home/.local/share/godot/
 ln -s /root/.local/share/godot/templates /github/home/.local/share/godot/
 
 # create editor_settings
