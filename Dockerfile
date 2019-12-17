@@ -1,8 +1,9 @@
 FROM jaypickle/godot-build:3.1.2
 LABEL author="james@pickett.me"
 
-COPY ./edit-tres.sh /edit-tres.sh
+USER root
 
+COPY ./edit-tres.sh /edit-tres.sh
 USER root
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
