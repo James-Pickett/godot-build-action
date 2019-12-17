@@ -2,14 +2,6 @@
 
 set -e
 
-wget https://downloads.tuxfamily.org/godotengine/3.1.2/Godot_v3.1.2-stable_export_templates.tpz --quiet
-mkdir ~/.cache
-mkdir -p ~/.config/godot
-mkdir -p ~/.local/share/godot/templates/3.1.2.stable
-unzip Godot_v3.1.2-stable_export_templates.tpz
-mv templates/* ~/.local/share/godot/templates/3.1.2.stable
-rm -f Godot_v3.1.2-stable_export_templates.tpz
-
 # create editor_settings
 export path_to_editor_settings=/github/home/.config/godot/editor_settings-3.tres
 mkdir -p $(dirname "$path_to_editor_settings")
