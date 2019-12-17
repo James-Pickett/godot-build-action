@@ -2,7 +2,7 @@
 
 set -e
 
-wget https://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v3.1.1-stable_export_templates.tpz
+wget https://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v3.1.1-stable_export_templates.tpz --quiet
 mkdir ~/.cache
 mkdir -p ~/.config/godot
 mkdir -p ~/.local/share/godot/templates/3.1.1.stable
