@@ -32,7 +32,7 @@ mv ./debug.keystore /usr/android-keys/debug.keystore
 # Export for HTML5
 echo "Building ${INPUT_BUILD_FILE_NAME} for Android"
 mkdir -p ./build/android/
-godot --export-debug Android ./build/android/${INPUT_BUILD_FILE_NAME}.apk -v
+godot -e -v --export-debug Android ./build/android/${INPUT_BUILD_FILE_NAME}.apk
 
 # Export for Linux
 echo "Building ${INPUT_BUILD_FILE_NAME} for Linux"
